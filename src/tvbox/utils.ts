@@ -50,8 +50,8 @@ const gen_tvbox_json = async (srcs: ITvBoxLiveSrc[]): Promise<TVBoxConfig> => {
     name,
     type: 0,
     url: `${get_custom_url()}/txt/${f_name}.txt`,
-    epg: `https://iptv-sources2.pages.dev/epg/pw-7/{date}/${f_name}.json`,
-    logo: `https://tv-res.pages.dev/logo/${f_name}.png`,
+    epg: `${get_custom_url()}/epg/pw-7/{date}/{name}.json`,
+    logo: `https://tv-res.pages.dev/logo/{name}.png`,
   }));
 
   return j;

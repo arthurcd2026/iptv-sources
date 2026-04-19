@@ -242,6 +242,7 @@ docker run -d --name iptv-sources --restart unless-stopped -p 8080:80 `
 | --- | --- |
 | `LIVE_RESULT_DIR` | nginx `location /` 的 `root`，默认 `/app/m3u` |
 | `M3U_ROOT` | 与上项二选一，效果相同（仍优先读已有 `schedule-config.json` 中的 `liveResultDir`） |
+| `CUSTOM_URL`| 站点根 URL，影响 TvBox json 配置文件中 epg 的链接前缀，格式可以为 `http://ip:port` , 其中 `ip` 为 docker 容器运行的宿主机ip |
 
 一般无需设置环境变量；仅当你需要把 nginx 的 `root` 指到容器内**其他目录**时配置 `LIVE_RESULT_DIR` 或 `M3U_ROOT` 即可。
 
